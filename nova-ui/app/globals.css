@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+/* Theme variables */
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #4f46e5;
+  --card: #ffffff;
+  --border: #e2e8f0;
+}
+
+/* Optional dark mode support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0f172a;
+    --foreground: #f8fafc;
+    --card: #1e293b;
+    --border: #334155;
+  }
+}
+
+/* Global styles */
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Input improvements */
+input {
+  @apply border border-slate-300 rounded-lg px-3 py-2 text-slate-900;
+}
+
+input::placeholder {
+  @apply text-slate-400;
+}
+
+input:focus {
+  @apply outline-none ring-2 ring-indigo-500 border-indigo-500;
+}
+
+/* Button defaults */
+button {
+  @apply transition duration-200;
+}
+
+/* Card style utility */
+.card {
+  @apply bg-white rounded-2xl shadow-lg border border-slate-100;
+}
