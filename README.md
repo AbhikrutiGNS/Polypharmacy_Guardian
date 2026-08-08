@@ -5,7 +5,6 @@
 Built for HEAL-A-THON 2026 by Team NOVA, PES University.
 
 ---
-
 ## Table of Contents
 
 1. [What This Project Does](#1-what-this-project-does)
@@ -25,7 +24,6 @@ Built for HEAL-A-THON 2026 by Team NOVA, PES University.
 15. [Known Limitations](#15-known-limitations)
 
 ---
-
 ## 1. What This Project Does
 
 NOVA CHEAL answers two kinds of questions:
@@ -43,17 +41,17 @@ The system is explicitly **not** a black-box chatbot. A SQLite database of curat
 
 ```
                          ┌─────────────────────────┐
-                         │   Next.js Frontend       │
-                         │   (nova-ui)               │
-                         │  Interaction Checker /    │
-                         │  Drug Information tabs    │
-                         └────────────┬──────────────┘
+                         │   Next.js Frontend      │
+                         │   (nova-ui)             │
+                         │  Interaction Checker /  │
+                         │  Drug Information tabs  │
+                         └────────────┬────────────┘
                                       │ REST (JSON)
                                       ▼
                          ┌─────────────────────────┐
-                         │   FastAPI Backend         │
-                         │   app/main.py              │
-                         └────────────┬──────────────┘
+                         │   FastAPI Backend       │
+                         │   app/main.py           │
+                         └────────────┬────────────┘
                                       │
                  ┌────────────────────┼────────────────────┐
                  ▼                    ▼                     ▼
@@ -70,15 +68,15 @@ _service.py  _service.py _service.py (rxcui resolution,
  (DB truth)  (profiles)  (RAG chunks) fuzzy matching,
       │          │          │         combo drugs)
       └──────────┴──────────┴─────────────┬───────┘
-                                           ▼
+                                          ▼
                                   app/db/database.py
                                   (SQLite: medisafe.db)
                                            │
                                            ▼
                                ┌───────────────────────┐
-                               │  llm_provider.py        │
-                               │  (Cerebras — explains,   │
-                               │   never overrides)       │
+                               │  llm_provider.py      │
+                               │  (Cerebras — explains,│
+                               │   never overrides)    │
                                └───────────────────────┘
 ```
 
