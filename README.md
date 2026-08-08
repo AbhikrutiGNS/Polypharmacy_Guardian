@@ -512,6 +512,11 @@ uvicorn app.main:app --reload --port 8000
 cd nova-ui
 npm install
 
+# lucide-react is used by DrugProfileCard.tsx and InteractionResult.tsx
+# for icons, but isn't always picked up automatically — install explicitly
+# if you hit "Module not found: Can't resolve 'lucide-react'"
+npm install lucide-react
+
 # .env.local
 echo "NEXT_PUBLIC_API_URL=http://127.0.0.1:8000" > .env.local
 
